@@ -232,9 +232,9 @@ a {
 #contact textarea {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ffffff;
-    background-color: #444;
-    color: #ffffff;
+    border: 2px solid #ff6f61;
+    background-color: #e7dede;
+    color: rgb(0, 0, 0)
 }
 
 #contact button {
