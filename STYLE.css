@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    overflow-x: hidden; 
+}
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navbar navbar"
+      "about image"
+      "skills skills"
+      "projects projects"
+      "contact contact"
+      "footer footer";
+    border: 2px solid black;
+    width: 100%;  
+    height: auto;   
+}
+
+.navbar {
+    grid-area: navbar;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #00000f;
+    box-shadow: 0 .3px 0 0 white;
+}
+#logo {
+    padding-left: 20px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 0.5px white;
+    text-transform: uppercase;
+}
+.navlinks {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    margin-left: 250px; 
+}
+a {
+    text-decoration: none;
+    padding: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(232, 225, 225);
+    border: 1.8px solid #ffffff;
+    padding: 7px 15px;
+    border-radius: 30px;    
+    margin-right: 55px;
+}
+.navlinks a:hover {
+    color: #ffffff;
+    background-color: #ff6f61;
+}
+.image {
+    grid-area: image;
+    height: 73%;
+}
+.image img {
+    height: 100%;
+    margin: 0px 70px 0px 60px;
+    padding-top: 40px;
+    filter: brightness(120%);
+    filter: contrast(110%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 88%, rgba(0, 0, 0, 0) 100%);
+}
+
+#about {
+     grid-area: about; 
+     height: 73%;
+}
+#abouth1{
+    color: #ffffff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    margin-left: 50px;
+    margin-top: 220px;
+}
+.p1 {
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    margin-left: 50px;
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+.p1 #name{
+    color: #ff6f61;
+    font-weight: bolder;
+}
+.p2 {
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 45px;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+#skills {
+    grid-area: skills; 
+    height: auto;
+    padding: 50px 60px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top: 2px solid #ffffff;
+}
+#skillsh1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    font-size: 50px;
+    margin-bottom: 20px; 
+}
+.skill-bar {
+    margin-bottom: 20px;
+}
+.skill-bar h4 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 5px;
+}
+.progress-bar {
+    background-color: rgb(173, 162, 162);
+    border-radius: 25px;
+    overflow: hidden;
+    height: 30px;
+    width: 100%;
+    position: relative;
+}
+.progress {
+    background-color: #ff6f61;
+    height: 100%;
+    border-radius: 25px;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: bolder;
+    transition: width 0.5s ease;
+}
+
+.progress-bar:hover .progress {
+    background-color: #fb3c3c;
+}
+#projects {
+    grid-area: projects; 
+    height: auto;
+    padding: 50px 60px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top: 2px solid #ffffff;
+}
+#projectsh1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    font-size: 50px;
+    margin-bottom: 20px; 
+}
+.project .title1{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: 1.8px solid #ffffff;
+    padding: 7px 15px;
+    background :#000000;
+    border-radius: 30px;
+}
+.project .title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ff6f61;
+    font-size: 25px;
+    margin-bottom: 30px;
+    
+}
+.project .discription{
+    color: #f4eeee;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.project img {
+    max-width: 50%;
+    margin-left: 250px;
+    border: 2px solid #ff6f61;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.3);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, .5);
+}
+#contact {
+    grid-area: contact; 
+    padding: 50px 60px; 
+    margin-left: 250px;
+    width: 50%;
+    background-color: #000000; 
+    color: #ffffff;
+    border-top: 2px solid #ffffff;
+}
+
+#contact h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ff6f61;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+}
+
+#contact input,
+#contact textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    background-color: #444;
+    color: #ffffff;
+}
+
+#contact button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #f88075;
+}
+#footer {
+    grid-area: footer;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.footer-logos a{
+    border: none;
+    width: 15px;
+}
+.footer-logo {
+    border: 1px solid #f88075; 
+    border-radius: 10px;
+    padding: 2px; 
+    background-color: #f88075;
+    width: 30px;
+    height: 30px;
+}
+#footer p {
+    margin-top: 30px;
+    font-size: 14px;
+    margin-right: 35px;
+}
+/*
+*{
+    border: 3px solid red;
+}
+*/
